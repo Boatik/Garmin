@@ -1,0 +1,5 @@
+<fonts>
+	<font id="Opt1_font" filename="opt1_font.fnt" filter="0123456789"/>
+	<font id="Opt2_font" filename="opt2_font.fnt" filter="0123456789"/>
+	<font id="Opt3_font" filename="opt3_font.fnt" filter="I"/>
+</fonts>
