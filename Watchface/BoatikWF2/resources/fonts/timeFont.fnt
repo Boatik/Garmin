@@ -1,0 +1,15 @@
+info face="Paranoid Orange" size=-122 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=0 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=127 base=102 scaleW=300 scaleH=90 pages=2 packed=0 alphaChnl=0 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="timeFont_0.png"
+page id=1 file="timeFont_1.png"
+chars count=10
+char id=48   x=0     y=0     width=31    height=89    xoffset=7     yoffset=15    xadvance=44    page=0  chnl=15
+char id=49   x=264   y=0     width=32    height=85    xoffset=6     yoffset=17    xadvance=45    page=0  chnl=15
+char id=50   x=161   y=0     width=32    height=87    xoffset=6     yoffset=15    xadvance=46    page=0  chnl=15
+char id=51   x=128   y=0     width=32    height=88    xoffset=5     yoffset=15    xadvance=43    page=0  chnl=15
+char id=52   x=226   y=0     width=37    height=85    xoffset=2     yoffset=17    xadvance=42    page=0  chnl=15
+char id=53   x=194   y=0     width=31    height=87    xoffset=7     yoffset=17    xadvance=44    page=0  chnl=15
+char id=54   x=32    y=0     width=31    height=89    xoffset=7     yoffset=15    xadvance=45    page=0  chnl=15
+char id=55   x=0     y=0     width=31    height=85    xoffset=6     yoffset=17    xadvance=44    page=1  chnl=15
+char id=56   x=64    y=0     width=31    height=89    xoffset=6     yoffset=15    xadvance=44    page=0  chnl=15
+char id=57   x=96    y=0     width=31    height=89    xoffset=7     yoffset=15    xadvance=44    page=0  chnl=15

@@ -1,0 +1,7 @@
+<properties>
+
+    <property id="BackgroundColor" type="number">0x000000</property>
+    <property id="ForegroundColor" type="number">0xFFFFFF</property>
+    <property id="AccentColor" type="number">0xFF5500</property>
+    
+</properties>
