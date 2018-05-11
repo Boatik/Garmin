@@ -8,11 +8,16 @@
     
     <drawable id="Time" class="Time">
         <param name="hourX">98</param>
-        <param name="hourY">10</param>
+        <param name="hourY">12</param>
         
         <param name="minuteX">98</param>
-        <param name="minuteY">105</param>
+        <param name="minuteY">107</param>
          
+    </drawable>
+ 
+     <drawable id="Field1" class="Field1">
+        <param name="x">185</param>
+        <param name="y">73</param>   	
     </drawable>
     
     <drawable id="Field2" class="Field2">
@@ -20,7 +25,26 @@
         <param name="y">117</param>   	
     </drawable>
     
+     <drawable id="Field3" class="Field3">
+        <param name="x">80</param>
+        <param name="y">40</param>   	
+    </drawable>
     
-    <drawable id="MyGrid" class="MyGrid"/>
+    <drawable id="Field4" class="Field4">
+        <param name="x">80</param>
+        <param name="y">60</param>   	
+    </drawable>
+
+    <drawable id="Field5" class="Field5">
+        <param name="x">80</param>
+        <param name="y">100</param>   	
+    </drawable>
+    
+    <drawable id="Field6" class="Field6">
+        <param name="x">80</param>
+        <param name="y">140</param>   	
+    </drawable>
+                  
+    <!-- drawable id="MyGrid" class="MyGrid"/ -->
     
 </layout>

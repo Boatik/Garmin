@@ -25,7 +25,7 @@ class BoatikWF2View extends Ui.WatchFace {
     function onUpdate(dc) {
         // Get the current time and format it correctly
         
-        
+        Globals.updateCurrentTime();
         View.onUpdate(dc);//add if to update only if active
     }
 
