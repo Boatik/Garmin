@@ -40,22 +40,38 @@ class Field6 extends Ui.Drawable  { //battery
 
 class Notifications extends Ui.Drawable {
 	hidden var x, y, color, font;
+	hidden var iconX, iconY, iconX2,iconX3, iconY2;
 	
 	function initialize(params){
 		x = params.get(:x);
 		y = params.get(:y);
-		
+		//initialize icon coordinates to avoid unnecessary calculations during updates
+		iconX = x-18;
+		iconX2 = x-11;
+		iconY = y+8;
+		iconY2 = y+14;
+		iconX3 = x-3;
 		color =  Application.getApp().getProperty("BackgroundColor");
 		font = Gfx.FONT_XTINY;		
 	}
 	function draw(dc) {
 		if (Globals.notifications > 0) {
 			dc.setColor(color, Gfx.COLOR_TRANSPARENT);
-			dc.drawText(x, y, font, 
-				"n:"+Globals.notifications, 
-				Gfx.TEXT_JUSTIFY_RIGHT);
+			var textDimensions = dc.getTextDimensions(Globals.notifications.toString(), font);
+			drawIcon(dc,textDimensions);
+			dc.drawText(x-textDimensions[0], y, font, 
+				Globals.notifications, 
+				Gfx.TEXT_JUSTIFY_LEFT);
 		}
 	}
+	function drawIcon(dc, textDimensions) {
+		dc.drawRectangle(iconX-textDimensions[0], iconY, 16, 10);
+		dc.drawLine(iconX-textDimensions[0], iconY,
+					iconX2-textDimensions[0], iconY2);
+		dc.drawLine(iconX3-textDimensions[0], iconY,
+					iconX2-textDimensions[0], iconY2);
+	}
+	
 }
 
 class Battery extends Ui.Drawable {
