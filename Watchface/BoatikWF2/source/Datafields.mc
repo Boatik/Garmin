@@ -40,19 +40,18 @@ class Field6 extends Ui.Drawable  { //battery
 
 class Notifications extends Ui.Drawable {
 	hidden var x, y, color, font;
-	hidden var iconX, iconY, iconX2,iconX3, iconY2;
+	hidden var iconX, iconY, iconsFont, icon;
 	
-	function initialize(params){
+	function initialize(params) {
 		x = params.get(:x);
 		y = params.get(:y);
 		//initialize icon coordinates to avoid unnecessary calculations during updates
 		iconX = x-18;
-		iconX2 = x-11;
-		iconY = y+8;
-		iconY2 = y+14;
-		iconX3 = x-3;
+		iconY = y-7;
 		color =  Application.getApp().getProperty("BackgroundColor");
-		font = Gfx.FONT_XTINY;		
+		font = Gfx.FONT_XTINY;
+		iconsFont = Ui.loadResource(Rez.Fonts.Icons);
+		icon="0";	
 	}
 	function draw(dc) {
 		if (Globals.notifications > 0) {
@@ -65,11 +64,9 @@ class Notifications extends Ui.Drawable {
 		}
 	}
 	function drawIcon(dc, textDimensions) {
-		dc.drawRectangle(iconX-textDimensions[0], iconY, 16, 10);
-		dc.drawLine(iconX-textDimensions[0], iconY,
-					iconX2-textDimensions[0], iconY2);
-		dc.drawLine(iconX3-textDimensions[0], iconY,
-					iconX2-textDimensions[0], iconY2);
+		dc.drawText(iconX-textDimensions[0], iconY, iconsFont, 
+				icon,
+				Gfx.TEXT_JUSTIFY_LEFT);		
 	}
 	
 }
