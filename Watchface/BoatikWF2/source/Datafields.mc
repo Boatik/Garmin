@@ -32,10 +32,48 @@ class Field5 extends Ui.Drawable  { //battery
 	function initialize(params){ dataField = new Battery (params); }
 	function draw(dc) {	dataField.draw(dc); }
 }
-class Field6 extends Ui.Drawable  { //battery
+class Field6 extends Ui.Drawable  { //Notifications
 	var dataField;
 	function initialize(params){ dataField = new Notifications (params); }
 	function draw(dc) {	dataField.draw(dc); }
+}
+class Field7 extends Ui.Drawable  { //alarms
+	var dataField;
+	function initialize(params){ dataField = new Alarms (params); }
+	function draw(dc) {	dataField.draw(dc); }
+}
+
+class Alarms extends Ui.Drawable {
+	hidden var x, y, color, font;
+	hidden var iconX, iconY, iconsFont, icon;
+	
+	function initialize(params) {
+		x = params.get(:x);
+		y = params.get(:y);
+		//initialize icon coordinates to avoid unnecessary calculations during updates
+		iconX = x-15;
+		iconY = y-7;
+		color =  Application.getApp().getProperty("BackgroundColor");
+		font = Gfx.FONT_XTINY;
+		iconsFont = Ui.loadResource(Rez.Fonts.Icons);
+		icon="1";	
+	}
+	function draw(dc) {
+		if (Globals.alarms > 0) {
+			dc.setColor(color, Gfx.COLOR_TRANSPARENT);
+			var textDimensions = dc.getTextDimensions(Globals.alarms.toString(), font);
+			drawIcon(dc,textDimensions);
+			dc.drawText(x-textDimensions[0], y, font, 
+				Globals.alarms, 
+				Gfx.TEXT_JUSTIFY_LEFT);
+		}
+	}
+	function drawIcon(dc, textDimensions) {
+		dc.drawText(iconX-textDimensions[0], iconY, iconsFont, 
+				icon,
+				Gfx.TEXT_JUSTIFY_LEFT);		
+	}
+	
 }
 
 class Notifications extends Ui.Drawable {

@@ -44,7 +44,11 @@
         <param name="x">80</param>
         <param name="y">140</param>   	
     </drawable>
-                  
+ 
+    <drawable id="Field7" class="Field7">
+        <param name="x">80</param>
+        <param name="y">160</param>   	
+    </drawable>                  
     <!-- drawable id="MyGrid" class="MyGrid"/ -->
     
 </layout>
