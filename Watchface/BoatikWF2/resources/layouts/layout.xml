@@ -15,40 +15,47 @@
          
     </drawable>
  
-     <drawable id="Field1" class="Field1">
+     <drawable id="Field1" class="Field1"><!-- heartrate-->
         <param name="x">185</param>
         <param name="y">73</param>   	
     </drawable>
     
-    <drawable id="Field2" class="Field2">
+    <drawable id="Field2" class="Field2"><!-- seconds-->
         <param name="x">183</param>
         <param name="y">117</param>   	
     </drawable>
     
-     <drawable id="Field3" class="Field3">
+     <drawable id="Field3" class="Field3"><!-- day of week-->
         <param name="x">80</param>
         <param name="y">40</param>   	
     </drawable>
     
-    <drawable id="Field4" class="Field4">
+    <drawable id="Field4" class="Field4"><!-- date-->
         <param name="x">80</param>
         <param name="y">60</param>   	
     </drawable>
 
-    <drawable id="Field5" class="Field5">
+    <drawable id="Field5" class="Field5"><!-- battery-->
         <param name="x">80</param>
         <param name="y">100</param>   	
     </drawable>
     
-    <drawable id="Field6" class="Field6">
+    <drawable id="Field6" class="Field6"><!-- notifications-->
         <param name="x">80</param>
         <param name="y">140</param>   	
     </drawable>
  
-    <drawable id="Field7" class="Field7">
+    <drawable id="Field7" class="Field7"><!-- alarms-->
         <param name="x">80</param>
         <param name="y">160</param>   	
-    </drawable>                  
-    <!-- drawable id="MyGrid" class="MyGrid"/ -->
+    </drawable>
+
+    <drawable id="Field8" class="Field8"> <!-- phoneConnected-->
+        <param name="x">80</param>
+        <param name="y">20</param>   	
+    </drawable>  
+    
+                  
+    <!-- drawable id="MyGrid" class="MyGrid"/-->
     
 </layout>

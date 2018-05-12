@@ -42,6 +42,33 @@ class Field7 extends Ui.Drawable  { //alarms
 	function initialize(params){ dataField = new Alarms (params); }
 	function draw(dc) {	dataField.draw(dc); }
 }
+class Field8 extends Ui.Drawable  { //alarms
+	var dataField;
+	function initialize(params){ dataField = new PhoneConnected (params); }
+	function draw(dc) {	dataField.draw(dc); }
+}
+
+class PhoneConnected extends Ui.Drawable {
+	hidden var x, y, color, font, icon;
+	
+	function initialize(params) {
+		x = params.get(:x)-12;
+		y = params.get(:y)-5;
+		color =  Application.getApp().getProperty("BackgroundColor");
+		font =  Ui.loadResource(Rez.Fonts.Icons);
+		icon="2";	
+	}
+	function draw(dc) {
+		if (Globals.phoneConnected) {
+			dc.setColor(color, Gfx.COLOR_TRANSPARENT);
+			dc.drawText(x, y, font, 
+				icon, 
+				Gfx.TEXT_JUSTIFY_LEFT);
+		}
+	}
+}
+
+
 
 class Alarms extends Ui.Drawable {
 	hidden var x, y, color, font;

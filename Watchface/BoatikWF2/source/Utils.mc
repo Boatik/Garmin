@@ -7,7 +7,7 @@ using Toybox.System as Sys;
 module Globals {
 	hidden var active=true;
 	var date,hourStr,minuteStr,secondStr,dayStr,monthStr,dayOfWeekStr;	
-	var notifications, alarms;
+	var notifications, alarms, phoneConnected;
 	
 	function updateCurrentTime() {
         date = Gre.info(Time.now(), Time.FORMAT_MEDIUM); 
@@ -20,6 +20,7 @@ module Globals {
 		
 		notifications = Sys.getDeviceSettings().notificationCount;
 		alarms = Sys.getDeviceSettings().alarmCount;
+		phoneConnected = Sys.getDeviceSettings().phoneConnected;
 	}
 	function setActive(value) { active = value; }
 	function getActive() { return active; }
