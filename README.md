@@ -2,7 +2,7 @@
 Some Garmin vivoactive3 stuff
 
 
-## Boatik Watchface 2 - low power watchce
+## Boatik Watchface 2 - low power watchface
 ver: 0.01
 
 devices: vivoactive3
